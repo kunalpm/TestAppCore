@@ -28,7 +28,7 @@ jobs:
     - name: Build
       run: dotnet build --no-restore
     - name: Publish
-      run: dotnet publish 'TestAppCore.csproj' -c Release --self-contained -r win-x84 -p:PublishSingleFile=true --no-build
+      run: dotnet publish 'TestAppCore.csproj' -c Release --self-contained -r win-x86 -p:PublishSingleFile=true --no-build
     - name: Deploy
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
